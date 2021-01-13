@@ -1,4 +1,4 @@
-import { RpgPlayer } from '@rpgjs/server'
+import { RpgPlayer, Control } from '@rpgjs/server'
 import { database } from '@rpgjs/starter-kit-server'
 
 export class Player extends RpgPlayer {
@@ -8,18 +8,9 @@ export class Player extends RpgPlayer {
         this.setActor(database.Hero)
         await this.changeMap('medieval')
     }
-
     onInput({ input }) {
-      if (input == 'escape') {
+      if (input == Control.Back) {
         this.callMainMenu()
       }
-    }
-
-    onDead() {
-       
-    }
-
-    onLevelUp(nbLevel) {
-        
     }
 }
