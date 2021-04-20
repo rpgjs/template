@@ -1,14 +1,13 @@
 {
   "name": "rpg-game",
-  "version": "3.0.0-alpha.5.1",
+  "version": "3.0.0-alpha.7",
   "description": "",
   "main": "index.js",
-  "types": "index.d.ts",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "test": "jest",
+    "test": "NODE_ENV=test jest",
     "build": "rimraf dist && webpack",
     "dev": "webpack -w",
     "start": "node dist/server"
@@ -16,21 +15,8 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "jest": {
-    "transform": {
-      "\\.ts$": "ts-jest",
-      "\\.tmx$": "<rootDir>/node_modules/@rpgjs/compiler/tmx-loader/index.js"
-    },
-    "transformIgnorePatterns": [
-      "/node_modules/(?!(@rpgjs/.+)/)/"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "js"
-    ]
-  },
   "devDependencies": {
-    "@rpgjs/compiler": "^3.0.0-alpha.4.4",
+    "@rpgjs/compiler": "^3.0.0-alpha.7",
     "@types/jest": "^26.0.22",
     "jest": "^26.6.3",
     "rimraf": "^3.0.2",
@@ -40,14 +26,14 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
-    "@rpgjs/client": "^3.0.0-alpha.5.1",
-    "@rpgjs/database": "^3.0.0-alpha.5.1",
-    "@rpgjs/default-gui": "^3.0.0-alpha.5.1",
-    "@rpgjs/server": "^3.0.0-alpha.5.1",
-    "@rpgjs/standalone": "^3.0.0-alpha.5.1",
-    "@rpgjs/starter-kit-client": "^3.0.0-alpha.5.1",
-    "@rpgjs/starter-kit-server": "^3.0.0-alpha.5.1",
-    "@rpgjs/testing": "^3.0.0-alpha.5.1",
+    "@rpgjs/client": "^3.0.0-alpha.7",
+    "@rpgjs/compiler": "^3.0.0-alpha.7",
+    "@rpgjs/database": "^3.0.0-alpha.7",
+    "@rpgjs/default-gui": "^3.0.0-alpha.7",
+    "@rpgjs/server": "^3.0.0-alpha.7",
+    "@rpgjs/standalone": "^3.0.0-alpha.7",
+    "@rpgjs/starter-kit": "^3.0.0-alpha.7",
+    "@rpgjs/testing": "^3.0.0-alpha.7",
     "express": "^4.17.1",
     "socket.io": "^3.1.2",
     "socket.io-client": "^4.0.1",

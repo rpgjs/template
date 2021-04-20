@@ -1,18 +1,19 @@
 import { RpgClient, RpgClientEngine } from '@rpgjs/client'
-import { spritesheets, sounds } from '@rpgjs/starter-kit-client'
-import gui from '@rpgjs/default-gui'
+import plugins from '../plugins'
 import { SceneMap } from './map'
 import { Sprite } from './sprite'
 
 @RpgClient({
-    spritesheets,
-    sounds,
-    gui,
+    plugins,
     spriteClass: Sprite,
     scenes: {
         map: SceneMap
     }
 })
 export default class RPG extends RpgClientEngine {
-    
+    onConnected() { }
+
+    onConnectError(err) { }
+
+    onDisconnect() { }
 }

@@ -13,6 +13,7 @@ const io = new Server(server, {
     maxHttpBufferSize: 1e4
 })
 const rpgGame = entryPoint(RPG, io)
+rpgGame.app = app // Useful for plugins (monitoring, backend, etc.)
 
 app.use('/', express.static(__dirname + '/../client'))
 

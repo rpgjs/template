@@ -1,16 +1,25 @@
-import { RpgPlayer, Control } from '@rpgjs/server'
-import { database } from '@rpgjs/starter-kit-server'
+import { RpgPlayer, RpgMap, Control } from '@rpgjs/server'
 
 export class Player extends RpgPlayer {
-    async onConnected() {
-        this.setHitbox(20, 16)
-        this.setGraphic('male1_2')
-        this.setActor(database.Hero)
-        await this.changeMap('medieval')
-    }
+    onConnected() { }
+
     onInput({ input }) {
-      if (input == Control.Back) {
-        this.callMainMenu()
-      }
+        if (input == Control.Back) {
+            this.callMainMenu()
+        }
     }
+
+    onJoinMap(map: RpgMap) { }
+
+    onLeaveMap(map: RpgMap) { }
+
+    onInVision(other: RpgPlayer) { }
+
+    onOutVision(other: RpgPlayer) { }
+
+    onLevelUp(nbLevel) { }
+
+    onDead() { }
+
+    onDisconnected() { }
 }
