@@ -1,42 +1,43 @@
 {
-  "name": "rpg-game",
-  "version": "3.0.0-alpha.7",
-  "description": "",
-  "main": "index.js",
-  "publishConfig": {
-    "access": "public"
-  },
-  "scripts": {
-    "test": "NODE_ENV=test jest",
-    "build": "rimraf dist && webpack",
-    "dev": "webpack -w",
-    "start": "node dist/server"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "devDependencies": {
-    "@rpgjs/compiler": "^3.0.0-alpha.7",
-    "@types/jest": "^26.0.22",
-    "jest": "^26.6.3",
-    "rimraf": "^3.0.2",
-    "ts-jest": "^26.5.4",
-    "typescript": "^4.2.3",
-    "webpack": "^4.46.0",
-    "webpack-cli": "^3.3.12"
-  },
-  "dependencies": {
-    "@rpgjs/client": "^3.0.0-alpha.7",
-    "@rpgjs/compiler": "^3.0.0-alpha.7",
-    "@rpgjs/database": "^3.0.0-alpha.7",
-    "@rpgjs/default-gui": "^3.0.0-alpha.7",
-    "@rpgjs/server": "^3.0.0-alpha.7",
-    "@rpgjs/standalone": "^3.0.0-alpha.7",
-    "@rpgjs/starter-kit": "^3.0.0-alpha.7",
-    "@rpgjs/testing": "^3.0.0-alpha.7",
-    "express": "^4.17.1",
-    "socket.io": "^3.1.2",
-    "socket.io-client": "^4.0.1",
-    "vue": "^3.0.9"
-  }
+    "name": "my-game",
+    "version": "3.0.0-alpha.10",
+    "description": "",
+    "main": "dist/server.js",
+    "types": "index.d.ts",
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "test": "NODE_ENV=test jest",
+        "build": "rimraf dist && webpack",
+        "dev": "webpack -w",
+        "start": "node dist/server"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "@rpgjs/client": "^3.0.0-alpha.10",
+        "@rpgjs/default-gui": "^3.0.0-alpha.10",
+        "@rpgjs/mobile-gui": "^3.0.0-alpha.10",
+        "@rpgjs/server": "^3.0.0-alpha.10",
+        "@rpgjs/standalone": "^3.0.0-alpha.10",
+        "@rpgjs/starter-kit": "^3.0.0-alpha.10",
+        "@rpgjs/testing": "^3.0.0-alpha.10",
+        "express": "4.17.1",
+        "socket.io": "4.1.2",
+        "socket.io-client": "4.1.2",
+        "vue": "3.0.11"
+    },
+    "devDependencies": {
+        "@rpgjs/compiler": "^3.0.0-alpha.10",
+        "@types/jest": "26.0.23",
+        "jest": "27.0.4",
+        "canvas": "2.8.0",
+        "rimraf": "3.0.2",
+        "ts-jest": "27.0.2",
+        "typescript": "4.3.2",
+        "webpack": "4.46.0",
+        "webpack-cli": "3.3.12"
+    }
 }

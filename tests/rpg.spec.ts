@@ -1,14 +1,15 @@
-import { RpgWorld } from '@rpgjs/server'
+import { RpgWorld, RpgPlayer } from '@rpgjs/server'
 import { testing } from '@rpgjs/testing'
-import RPGServer from '../src/server/rpg'
+import modules from '../src/modules'
 
-let  client, socket, player
+let player: RpgPlayer
 
-beforeEach(() => {
-    const fixture = testing(RPGServer)
-    client = fixture.createClient()
-    socket = client.connection()
-    player = RpgWorld.getPlayer(client.id)
+beforeEach(async () => {
+    const fixture = testing(modules, {
+        basePath: __dirname + '/../'
+    })
+    const client = await fixture.createClient()
+    player = RpgWorld.getPlayer(client.playerId)
 })
 
 test('test player', () => {
