@@ -20,7 +20,7 @@ cd rpg-app
 npm install
 ```
 
-Navigate to [localhost:3001](http://localhost:3001). You should see your game running. Edit a file in `src`, save it, and reload the page to see your changes.
+Navigate to [localhost:3000](http://localhost:3001). You should see your game running. Edit a file in `src`, save it, and reload the page to see your changes.
 
 ## Credits for Sample package assets
 
@@ -32,3 +32,7 @@ Attribution 4.0 International (CC BY 4.0)- https://creativecommons.org/licenses/
 ### Graphics
 
 [Pipoya](https://pipoya.itch.io)
+
+### Icons
+
+https://game-icons.net
