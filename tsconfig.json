@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "module": "commonjs",
+    "module": "esnext",
     "outDir": "dist",
     "strict": true,
     "sourceMap": true,
@@ -22,9 +22,9 @@
     "resolveJsonModule": true
   },
   "include": [
-    "src", 
-    "index.d.ts", 
-    "tests", 
-    "node_modules/@rpgjs/compiler/types/*.d.ts"
+      "src", 
+      "index.d.ts", 
+      "tests", 
+      "node_modules/@rpgjs/compiler/types/*.d.ts"
   ]
 }
