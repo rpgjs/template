@@ -8,10 +8,9 @@
         "access": "public"
     },
     "scripts": {
-        "test": "NODE_ENV=test jest",
-        "build": "rimraf dist && rpgjs build",
+        "build": "rpgjs build",
         "dev": "rpgjs dev",
-        "start": "node dist/server"
+        "start": "node dist/server/main.mjs"
     },
     "keywords": [],
     "author": "",
