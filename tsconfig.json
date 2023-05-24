@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es2020",
     "module": "esnext",
     "outDir": "dist",
     "strict": true,
@@ -16,15 +16,17 @@
     "noImplicitAny": false,
     "noImplicitReturns": false,
     "declaration": false,
-    "experimentalDecorators": true, 
+    "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "types": ["node", "jest"],
+    "types": [
+      "node",
+      "vite/client"
+    ],
     "resolveJsonModule": true
   },
   "include": [
-      "src", 
-      "index.d.ts", 
-      "tests", 
-      "node_modules/@rpgjs/compiler/types/*.d.ts"
+    "src",
+    "index.d.ts",
+    "node_modules/@rpgjs/compiler/index.d.ts"
   ]
 }

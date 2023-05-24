@@ -1,28 +1,12 @@
-
-import http from 'http'
-import express from 'express'
-import bodyParser from 'body-parser'
-import { Server } from 'socket.io'
-import { entryPoint } from '@rpgjs/server'
+import { expressServer } from '@rpgjs/server/express'
+import * as url from 'url'
+import modules from './modules'
 import globalConfig from './config/server'
-import modules from './modules' 
 
-const PORT = process.env.PORT || 3000
+const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 
-const app = express()
-const server = http.createServer(app)
-const io = new Server(server, {
-    maxHttpBufferSize: 1e4
+expressServer(modules, {
+    globalConfig,
+    basePath: __dirname,
+    envs: import.meta.env
 })
-
-app.use(bodyParser.json())
-app.use('/', express.static(__dirname + '/../client'))
-
-server.listen(PORT, async () =>  {
-    const rpgGame = await entryPoint(modules, { io, basePath: __dirname, globalConfig })
-    rpgGame.app = app // Useful for plugins (monitoring, backend, etc.)
-    rpgGame.start()
-    console.log(`
-        ===> MMORPG is running on http://localhost:${PORT} <===
-    `)
-}) 
