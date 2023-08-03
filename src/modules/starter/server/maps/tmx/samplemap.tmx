@@ -667,8 +667,8 @@
   <object id="9" name="EV-3" x="1149" y="945">
    <point/>
   </object>
-  <object id="10" name="chest-1" x="590" y="211">
+  <!-- <object id="10" name="chest-1" x="590" y="211">
    <point/>
-  </object>
+  </object> -->
  </objectgroup>
 </map>
